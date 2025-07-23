@@ -20,14 +20,13 @@ header h1, header p.lead {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Sombra de texto sutil para que resalte más */
 }
 
-
 /* Ajustes para la foto de perfil en el encabezado */
 #foto-encabezado {
-    width: 165px; /* Aumentado el tamaño (era 150px) */
-    height: 165px; /* Aumentado el tamaño (era 150px) */
+    width: 200px; /* Aumentado el tamaño a 200px */
+    height: 200px; /* Aumentado el tamaño a 200px */
     object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
     border-radius: 0; /* Para que sea cuadrada, sin bordes redondeados */
-    border: none; /* Eliminado el borde blanco (era 3px solid white) */
+    border: none; /* Eliminado el borde blanco */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Una pequeña sombra para darle profundidad */
 }
 
@@ -73,6 +72,7 @@ header h1, header p.lead {
     .header .container .row {
         flex-direction: column-reverse; /* Cambia el orden: primero la imagen, luego el texto */
         align-items: center; /* Centra los elementos */
+        text-align: center; /* Centra el texto en el encabezado para móviles */
     }
     #foto-encabezado {
         margin-bottom: 20px; /* Añade espacio debajo de la foto en móviles */
@@ -84,5 +84,21 @@ header h1, header p.lead {
         font-size: 1rem; /* Ajuste para los enlaces en móviles */
         padding-top: 0.5rem; /* Más espacio en móviles */
         padding-bottom: 0.5rem;
+    }
+    /* AJUSTES PARA EL ENCABEZADO EN MÓVILES */
+    header h1 {
+        font-size: 1.8rem; /* Tamaño de fuente más pequeño para el nombre */
+        line-height: 1.2; /* Ajusta el espacio entre líneas si el nombre es largo */
+        word-wrap: break-word; /* Permite que el texto se divida en varias líneas si es muy largo */
+        white-space: normal; /* Asegura que el texto no intente estar en una sola línea */
+    }
+    header p.lead {
+        font-size: 0.9rem; /* Tamaño de fuente más pequeño para el subtítulo */
+        line-height: 1.2;
+    }
+    /* Asegurar que el padding del header sea adecuado en móviles */
+    header.bg-primary.text-white.py-4 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
     }
 }
