@@ -1,3 +1,26 @@
+/* Importar fuentes de Google Fonts para una tipografía profesional */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;600&family=Roboto:wght@400;500;700&display=swap');
+
+/* Estilos generales para el cuerpo del documento */
+body {
+    font-family: 'Open Sans', sans-serif; /* Fuente para el texto general del CV */
+    background-color: #f8f9fa; /* Un color de fondo muy ligero para la página */
+    color: #343a40; /* Color de texto general oscuro */
+}
+
+/* Estilos para los encabezados */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif; /* Una fuente que destaque un poco más para los títulos */
+    color: #007bff; /* Usando el color primario de Bootstrap para los títulos */
+}
+
+/* Ajuste específico para el color del nombre y el lead en el encabezado */
+header h1, header p.lead {
+    color: white; /* Cambiar el color del texto a blanco puro para mayor visibilidad */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Sombra de texto sutil para que resalte más */
+}
+
+
 /* Ajustes para la foto de perfil en el encabezado */
 #foto-encabezado {
     width: 150px; /* Tamaño cuadrado de la imagen */
@@ -5,6 +28,44 @@
     object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
     border-radius: 0; /* Para que sea cuadrada, sin bordes redondeados */
     border: 3px solid white; /* Un borde blanco para que se destaque */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Una pequeña sombra para darle profundidad */
+}
+
+/* Estilos para la barra de navegación (Navbar) */
+.navbar {
+    border-bottom: 1px solid rgba(0,0,0,.08); /* Una línea sutil debajo de la barra de navegación para formalidad */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra ligera para el navbar */
+}
+
+/* Estilo para el brand (Mi Hoja de Vida) en la navegación */
+.navbar-brand {
+    font-family: 'Lato', sans-serif; /* Fuente profesional para el nombre del CV */
+    font-size: 1.3rem; /* Más grande para el logo del CV */
+    font-weight: 700; /* Más negrita para el logo */
+    color: #343a40 !important; /* Asegura que el color sea oscuro, importante si el fondo es claro */
+}
+
+/* Estilos para los enlaces de navegación */
+.navbar-nav .nav-link {
+    font-family: 'Roboto', sans-serif; /* Fuente para los enlaces de navegación */
+    font-size: 1.05rem; /* Un poco más grande que el tamaño por defecto */
+    font-weight: 500; /* Un peso medio para que resalte sin ser muy negrita */
+    padding-left: 1rem; /* Ajuste el espacio entre elementos */
+    padding-right: 1rem; /* Ajuste el espacio entre elementos */
+    color: #555 !important; /* Un gris oscuro para los enlaces */
+    transition: color 0.3s ease; /* Transición suave para el hover */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff !important; /* Cambia a azul primario al pasar el mouse */
+}
+
+/* Estilos para las tarjetas de contenido (Estudios, Experiencia, Habilidades) */
+.card {
+    border: none; /* Eliminar bordes por defecto de Bootstrap si los hay */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sombra suave para las tarjetas */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    margin-bottom: 1.5rem; /* Espacio entre tarjetas */
 }
 
 /* Media query para pantallas más pequeñas (móviles) */
@@ -16,7 +77,12 @@
     #foto-encabezado {
         margin-bottom: 20px; /* Añade espacio debajo de la foto en móviles */
     }
+    .navbar-brand {
+        font-size: 1.15rem; /* Ajuste para el logo en móviles */
+    }
+    .navbar-nav .nav-link {
+        font-size: 1rem; /* Ajuste para los enlaces en móviles */
+        padding-top: 0.5rem; /* Más espacio en móviles */
+        padding-bottom: 0.5rem;
+    }
 }
-
-/* Opcional: Eliminar cualquier estilo de la imagen si lo tenías para la sección personal */
-/* Si tenías un estilo para #miFotoDePerfil en el CSS, bórralo, ya no se usa */
